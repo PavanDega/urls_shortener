@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>URL Shortener</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload', defer: true %>
+  </head>
+
+  <body>
+    <header>
+      <h1>Welcome to URL Shortener</h1>
+    </header>
+
+    <main>
+      <%= yield %> <!-- This is where the content of the specific view will be rendered -->
+    </main>
+
+    <footer>
+      <p>&copy; <%= Time.now.year %> URL Shortener</p>
+    </footer>
+  </body>
+</html>
